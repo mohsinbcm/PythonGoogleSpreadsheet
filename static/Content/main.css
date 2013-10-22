@@ -1,0 +1,30 @@
+table, th, td
+{
+	border: 1px solid black;
+}
+#InternalDiv{
+	display: none;
+	position: fixed;
+	z-index:2001;
+	top: 50%;
+	left: 50%;/**/
+	margin-top: 0px;
+	margin-left: 0px;
+	background: url("/static/Content/loadingBar.gif") no-repeat scroll 0 0 / 145px 145px rgba(63, 39, 39, 0.26);
+	height:145px;
+	width:145px;
+	background-repeat: no-repeat;
+}
+#ExternalDiv
+{
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    position: absolute;
+    margin: 0px;
+    background-color: #000;
+    opacity: 0.0;
+    filter: alpha(opacity:0);
+    z-index: 602;
+    display: none;
+}

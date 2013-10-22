@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title>My Test Page</title>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script src="/static/Content/utils.js"></script>
+	<link rel="stylesheet" href="/static/Content/main.css" />
+</head>
+<body>
+	<div>
+		<div id="tabs">
+			<ul>
+				<li><a href="#tabs1">{{title}}</a></li>
+			</ul>
+			<div id="tabs1">
+				<table>
+					{%for col1,col2,col3 in data %}
+					<tr>
+						<td>{{col1}}</td>
+						<td>{{col2}}</td>
+						<td>{{col3}}</td>
+					</tr>
+					{% endfor %}
+				</table>
+			</div>
+		</div>		
+		    <p>    
+		        <label>Please enter Url of SpreadSheet</label>
+		        <input type="text" name="url" value="" style="width:400px;" class="url_text">
+		        <input type="submit" value="Add Spreadsheet" class="set_url">
+		    </p>
+		</form>
+	</div>
+	<div class="result"></div>
+	<div id="tweetsdata"></div>
+
+	<div id="ExternalDiv">
+        &nbsp;</div>
+    <div id="InternalDiv">
+    </div>
+</body>
+</html>
