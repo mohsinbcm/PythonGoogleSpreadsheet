@@ -6,13 +6,13 @@ import gspread
 
 
 # Login with your Google account
-gc = gspread.login('mohsin.bcm.amu@gmail.com', 'fvxxdpuvqimuzjtw')
+gc = gspread.login('email@domain.com', '**********')
 
 app = Flask(__name__)
 # Index page
 @app.route("/")
 def hello():
-    sheet1 = gc.open_by_url('https://docs.google.com/spreadsheet/ccc?key=0AuiC5dWFnG5-dDAtdVBrdHNwdjJBM2hLcVFnV2Z3UkE&usp=sharing')
+    sheet1 = gc.open_by_url('https://docs.google.com/spreadsheet/ccc?key=*********************************************')
     worksheet = sheet1.get_worksheet(0)    
     return render_template('index.html', title = worksheet.title, data =worksheet.get_all_values())
     
